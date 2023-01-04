@@ -1,21 +1,22 @@
 def isPalindrome(x):
-    # lens = len(str(x))
-    # left = 0
-    # if x%2 == 1:
-    #     return False
-    # if x < 0:
-    #     return False
-    # right  = lens -1
-    # while left < lens/2-1:
-    #     if x[left] != x[right]:
-    #         return False
-    #     else:
-    #         left +=1
-    #         right -=1
-    #     return True
-    s = str(x)
-    return s == s[::-1]
-isPalindrome(-121)
+    xStr = str(x)
+    lens = len(xStr)
+    left = 0
+    if lens%2 == 0:
+        return False
+    if x < 0:
+        return False
+    right  = lens -1
+    while left < lens/2-1:
+        if xStr[left] != xStr[right]:
+            return False
+        else:
+            left +=1
+            right -=1
+        return True
+    # s = str(x)
+    # return s == s[::-1]
+print(isPalindrome(-21212))
 
 
 '''
